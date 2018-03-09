@@ -2,9 +2,6 @@ FROM    ubuntu:14.04
 
 MAINTAINER Charalampos Mageiridis <cmageiridis@gmail.com>
 
-
-#RUN  echo "deb http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse" > /etc/apt/sources.list && \ 
-
 RUN  sed 's/main$/main universe/' -i /etc/apt/sources.list && \    
      apt-get update && \
      apt-get install -y software-properties-common && \
